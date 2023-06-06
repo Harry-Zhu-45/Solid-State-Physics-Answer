@@ -1,0 +1,69 @@
+\documentclass[oneside,a4paper,openany,11pt]{ctexbook}
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\usepackage{graphicx}
+
+\usepackage{geometry}
+\geometry{a4paper, left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.2cm}
+
+\ctexset{%
+    section/format += \raggedright
+}
+
+\usepackage[version=4]{mhchem}
+\usepackage{siunitx}
+% \usepackage{tikz}
+
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}} % 定义微分算子
+
+\usepackage{makeidx} % 调用 makeidx 宏包，用来处理索引
+\makeindex % 开启索引的收集
+\bibliographystyle{plain} % 指定参考文献样式为 plain
+
+\usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
+%%%%% url自动断词换行 %%%%%
+\makeatletter
+\def\UrlAlphabet{%
+      \do\a\do\b\do\c\do\d\do\e\do\f\do\g\do\h\do\i\do\j%
+      \do\k\do\l\do\m\do\n\do\o\do\p\do\q\do\r\do\s\do\t%
+      \do\u\do\v\do\w\do\x\do\y\do\z\do\A\do\B\do\C\do\D%
+      \do\E\do\F\do\G\do\H\do\I\do\J\do\K\do\L\do\M\do\N%
+      \do\O\do\P\do\Q\do\R\do\S\do\T\do\U\do\V\do\W\do\X%
+      \do\Y\do\Z}
+\def\UrlDigits{\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9\do\0}
+\g@addto@macro{\UrlBreaks}{\UrlOrds}
+\g@addto@macro{\UrlBreaks}{\UrlAlphabet}
+\g@addto@macro{\UrlBreaks}{\UrlDigits}
+\makeatother
+%%%%% url自动断词换行 %%%%%
+
+\title{《固体物理学》习题解答}
+\author{祝茗}
+\date{\today}
+
+\begin{document}
+
+\frontmatter
+\maketitle
+\include{pages/preface}
+\tableofcontents
+
+\mainmatter
+\include{pages/chapter1}
+\include{pages/chapter2}
+\include{pages/chapter3}
+\include{pages/chapter4}
+\include{pages/chapter5}
+\include{pages/chapter6}
+\include{pages/chapter7}
+
+\appendix
+% \include{pages/appendix}
+% \include{pages/appendix}
+
+
+\backmatter
+% \include{epilogue} % 后记epilogue.tex
+% \bibliography{reference}
+\printindex % 利用 makeindex 工具生成索引
+
+\end{document}

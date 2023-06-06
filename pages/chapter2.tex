@@ -1,0 +1,337 @@
+\chapter{晶体中的衍射\label{ch:2}}
+
+\noindent \textbf{1.\quad} 试证明面心立方与体心立方互为正倒格子。
+
+\noindent \textbf{方法1：}
+
+面心立方：
+
+\begin{align*}
+    a_1 &= \frac{a}{2} (\vec{j}+\vec{k}) \\
+    a_2 &= \frac{a}{2} (\vec{k}+\vec{i}) \\
+    a_3 &= \frac{a}{2} (\vec{i}+\vec{j})
+\end{align*}
+
+由正格子和倒格子的转换关系
+
+\begin{align*}
+    \vec{b}_1 &= 2\pi (\vec{a}_2 \times \vec{a}_3) / \Omega \\
+    \vec{b}_2 &= 2\pi (\vec{a}_3 \times \vec{a}_1) / \Omega \\
+    \vec{b}_3 &= 2\pi (\vec{a}_1 \times \vec{a}_2) / \Omega
+\end{align*}
+
+其中 $\Omega=\vec{a}_1 \cdot (\vec{a}_2 \times \vec{a}_3)$，计算可得
+
+\begin{align*}
+    \vec{b}_1 &= \frac{2\pi}{a} (-\vec{i}+\vec{j}+\vec{k}) / \Omega \\
+    \vec{b}_2 &= \frac{2\pi}{a} (\vec{i}-\vec{j}+\vec{k}) / \Omega \\
+    \vec{b}_3 &= \frac{2\pi}{a} (\vec{i}+\vec{j}-\vec{k}) / \Omega
+\end{align*}
+
+在体心立方中
+
+\begin{align*}
+    \vec{a}_1 &= \frac{a}{2} (-\vec{i}+\vec{j}+\vec{k}) / \Omega \\
+    \vec{a}_2 &= \frac{a}{2} (\vec{i}-\vec{j}+\vec{k}) / \Omega \\
+    \vec{a}_3 &= \frac{a}{2} (\vec{i}+\vec{j}-\vec{k}) / \Omega
+\end{align*}
+
+同理可得
+
+\begin{align*}
+    \vec{b}_1 &= \frac{2\pi}{a} (\vec{j}+\vec{k}) \\
+    \vec{b}_2 &= \frac{2\pi}{a} (\vec{k}+\vec{i}) \\
+    \vec{b}_3 &= \frac{2\pi}{a} (\vec{i}+\vec{j})
+\end{align*}
+
+比较可得，面心立方与体心立方互为正倒格子。
+
+\noindent \textbf{方法2：}
+
+正格子与倒格子之间存在如下关系：
+
+\begin{equation*}
+    \vec{a}_i \cdot \vec{b}_j = 2 \pi \delta_{ij} =
+    \begin{cases}
+        1 & i = j \\
+        0 & i\ne j
+    \end{cases}
+\end{equation*}
+
+由此可得面心立方的倒格子基矢：
+
+\begin{align*}
+    \vec{b}_1 &= \frac{2\pi}{a} (-\vec{i}+\vec{j}+\vec{k}) / \Omega \\
+    \vec{b}_2 &= \frac{2\pi}{a} (\vec{i}-\vec{j}+\vec{k}) / \Omega \\
+    \vec{b}_3 &= \frac{2\pi}{a} (\vec{i}+\vec{j}-\vec{k}) / \Omega
+\end{align*}
+
+同理可得，体心立方的倒格子基矢：
+
+\begin{align*}
+    \vec{b}_1 &= \frac{2\pi}{a} (\vec{j}+\vec{k}) \\
+    \vec{b}_2 &= \frac{2\pi}{a} (\vec{k}+\vec{i}) \\
+    \vec{b}_3 &= \frac{2\pi}{a} (\vec{i}+\vec{j})
+\end{align*}
+
+比较可得，面心立方和体心立方互为正倒格子。
+
+\noindent \textbf{2.\quad} $\vec{a}, \vec{b}, \vec{c}$ 为简单正交格子的基矢，试证明晶面族 $(h\ k\ l)$ 的晶面间距为
+
+\begin{equation*}
+    d_{hkl} = \left[(h/a)^2 + (k/b)^2 + (l/c)^2\right]^{-1/2}
+\end{equation*}
+
+\noindent \textbf{解：}
+
+\begin{equation*}
+    \vec{a} = a \vec{i}, \vec{b} = b \vec{j}, \vec{c} = c \vec{j}, \Gamma  = \vec{a} \cdot (\vec{b} \times \vec{c}) = c
+\end{equation*}
+
+由书上公式可得倒格子
+
+\begin{align*}
+    \vec{a^*} &= 2\pi (\vec{b} \times \vec{c}) / \Gamma \\
+    \vec{b^*} &= 2\pi (\vec{c} \times \vec{a}) / \Gamma \\
+    \vec{c^*} &= 2\pi (\vec{a} \times \vec{b}) / \Gamma
+\end{align*}
+
+可得：
+
+\begin{align*}
+    \vec{a^*} &= \frac{2\pi}{a} \vec{i} \\
+    \vec{b^*} &= \frac{2\pi}{b} \vec{j} \\
+    \vec{c^*} &= \frac{2\pi}{c} \vec{k}
+\end{align*}
+
+\begin{equation*}
+    \therefore \vec{k_h} = h \vec{a^*} + k \vec{b^*} + l \vec{c^*} = \frac{2\pi}{a} h \vec{i} + \frac{2\pi}{a} k \vec{j} + \frac{2\pi}{a} l \vec{k}
+\end{equation*}
+
+再由书上公式
+
+\begin{equation*}
+    |\vec{k_h}| = 2\pi / d_{hkl}
+\end{equation*}
+
+可得
+
+\begin{equation*}
+    d_{hkl} = \frac{2\pi}{|\vec{k_h}|} = \frac{2\pi}{\sqrt{\left(\frac{2\pi h}{a}\right)^2 + \left(\frac{2\pi k}{b}\right)^2 + \left(\frac{2\pi l}{c}\right)^2}} = \left[(h/a)^2 + (k/b)^2 + (l/c)^2\right]^{-1/2}
+\end{equation*}
+
+\noindent \textbf{3.\quad} 六角密集结构如取如下原胞基矢
+
+\begin{equation*}
+    \vec{a}_1 = \frac{a}{2} \vec{i} + \frac{\sqrt{3}}{2} a \vec{j}, \quad \vec{a}_2 = -\frac{a}{2} \vec{i} + \frac{\sqrt{3}}{2} a \vec{j}, \vec{c} = c \vec{k}
+\end{equation*}
+
+\noindent 试写出其倒格子基矢。
+
+\noindent \textbf{方法一：}
+
+\begin{equation*}
+    \Omega = \vec{a}_1 \cdot (\vec{a}_2 \times \vec{c}) = \frac{a}{2} (\vec{i}+\sqrt{3}\vec{j}) \cdot \left[\left(-\frac{a}{2}\vec{i}+\frac{\sqrt{3}}{2}\vec{j}\right) \times c\vec{k}\right] = \frac{\sqrt{3}}{2} a^2 c
+\end{equation*}
+
+因此
+
+\begin{align*}
+    \vec{b}_1 &= 2\pi (\vec{a}_2 \times \vec{c}) / \Omega = \frac{2\pi}{3a} (3\vec{i}+\sqrt{3}\vec{j}) \\
+    \vec{b}_2 &= 2\pi (\vec{c} \times \vec{a}_1) / \Omega = \frac{2\pi}{3a} (-3\vec{i}+\sqrt{3}\vec{j}) \\
+    \vec{C}^\prime &= 2\pi (\vec{a}_1 \times \vec{a}_2) / \Omega = \frac{2\pi}{c} \vec{k}
+\end{align*}
+
+\noindent \textbf{方法二：}
+
+由正格子和倒格子之间的关系：
+
+\begin{equation*}
+    \vec{a}_i \cdot \vec{b}_j = 2 \pi \delta_{ij}
+\end{equation*}
+
+可得
+
+\begin{align*}
+    b_{11} = \frac{2\pi}{a} & b_{12} = \frac{2\sqrt{3}\pi}{3a} & b_{13} = 0 \\
+    b_{21} = -\frac{2\pi}{a} & b_{22} = \frac{2\sqrt{3}\pi}{3a} & b_{23} = 0 \\
+    c_{31}^\prime = 0 & c_{32}^\prime = 0 & c_{33}^\prime = \frac{2\pi}{c}
+\end{align*}
+
+所以
+
+\begin{align*}
+    \vec{b}_1 = 2\pi (\vec{a}_2 \times \vec{c}) / \Omega = \frac{2\pi}{3a} (3\vec{i}+\vec{j}) \\
+    \vec{b}_2 = 2\pi (\vec{c} \times \vec{a}_1) / \Omega = \frac{2\pi}{3a} (-3\vec{i}+\vec{j}) \\
+    \vec{c}^\prime = 2\pi (\vec{a}_1 \times \vec{a}_2) / Omega = \frac{2\pi}{c} \vec{k}
+\end{align*}
+
+\noindent \textbf{4.\quad} 如 $X$ 射线沿简立方原胞的 $Oz$ 负方向入射，求证当 $\lambda/a=2l(k^2+l^2)$ 和 $\cos\beta=(l^2-k^2)/(l^2+k^2)$ 时，衍射光线在 $yz$ 平面上，$\beta$ 为衍射线和 $Oz$ 轴的夹角。
+
+\noindent \textbf{证明}
+
+简立方的原胞的正格子基矢为：
+
+\begin{align*}
+    \vec{a}_1 = a \vec{i} \\
+    \vec{a}_2 = a \vec{j} \\
+    \vec{a}_3 = a \vec{k}
+\end{align*}
+
+且 $\Omega=a^3$
+
+其倒格矢为：
+
+\begin{align*}
+    \vec{b}_1 = \frac{2\pi}{a} \vec{i} \\
+    \vec{b}_2 = \frac{2\pi}{a} \vec{j} \\
+    \vec{b}_3 = \frac{2\pi}{a} \vec{k}
+\end{align*}
+
+\begin{equation*}
+    \therefore \vec{k_h} = \frac{2\pi}{a} h \vec{i} + \frac{2\pi}{a} k \vec{j} + \frac{2\pi}{a} l \vec{k}
+\end{equation*}
+
+又因为：
+
+\begin{equation*}
+    \sin\theta = \cos \frac{\beta}{2} = \sqrt{\frac{1+\cos\beta}{2}} = \sqrt{\frac{l^2}{l^+k^2}}
+\end{equation*}
+
+将 $\frac{\lambda}{a}=\frac{2l}{l^2+k^2}, \sin\theta=\sqrt{\frac{l^2}{l^2+k^2}}$ 带入 $m|\vec{k_h}|=2 \cdot \frac{2\pi}{\lambda} \sin\theta$ 可得
+
+\begin{equation*}
+    m \frac{2\pi}{a} \left(h^2+k^2+l^2\right)^{1/2} = 2 \cdot \frac{2\pi}{\lambda} \cdot \frac{l}{\left(l^2+k^2\right)^{1/2}}
+\end{equation*}
+
+\begin{equation*}
+    m \left(h^2+k^2+l^2\right)^{1/2} = \left(k^2+l^2\right)^{1/2}
+\end{equation*}
+
+当 $m=1, h^2=0$ 时，上式得以成立。$h=0$ 意味着 $\vec{k_h}$ 只有 $\vec{j}, \vec{k}$ 分量，即 $\vec{k}_0$ 只有 $\vec{k}$ 分量，因而 $\vec{k}-\vec{k}_0=\vec{k_h}$ 也只有 $\vec{j}, \vec{k}$ 分量，即衍射光线在 $yz$ 平面上。
+
+\noindent \textbf{5.\quad} 设在氯化钠晶体中，位于立方晶胞的 $(0\ 0\ 0), (1/2\ 1/2\ 0), (1/2\ 0\ 1/2)$ 与 $(0\ 1/2\ 1/2)$ 诸点；而 \ce{Cl^-} 位于 $(1/2\ 1/2\ 1/2), (0\ 0\ 1/2), (0\ 1/2\ 0)$ 与 $(1/2\ 0\ 0)$ 诸点。试讨论衍射面指数和衍射强度的关系。
+
+\noindent \textbf{解：}
+
+由书上公式
+
+\begin{equation*}
+    I_{mh, mk, ml} \propto \left[\sum_j f_j \cos(mh u_j + mk v_j + ml w_j)\right]^2 + \left[\sum_j f_j \cos(mh u_j + mk v_j + ml w_j)\right]^2
+\end{equation*}
+
+对于氯化钠晶胞：
+
+\begin{align*}
+    I_{mh, mk, ml} &\propto \left[f_{\ce{Na^+}} + f_{\ce{Na^+}} \cos\pi(mk+mh) + f_{\ce{Na^+}} \cos\pi(mk+ml) + f_{\ce{Na^+}} \cos\pi(mh+ml)\right]^2 \\
+    &+ \left[f_{\ce{Cl^-}} + f_{\ce{Cl^-}}\cos\pi(mh+mk+ml) + f_{\ce{Cl^-}}\cos\pi mh + f_{\ce{Cl^-}}\cos\pi mk + f_{\ce{Cl^-}}\cos\pi ml\right]^2
+\end{align*}
+
+\begin{itemize}
+    \item 当衍射面指数全为偶数时，$I \propto 16(f_{\ce{Na^+}}+f_{\ce{Cl^-}})^2$ 衍射强度最大，
+    \item 当衍射面指数全为奇数时，$I \propto 16(f_{\ce{Na^+}}-f_{\ce{Cl^-}})^2$ 由于 \ce{Cl^-} 与 \ce{Na^+} 具有不同的散射本领，使衍射指数全为奇数的衍射具有不为零但较低的强度。
+\end{itemize}
+
+\noindent \textbf{6.\quad} 试求金刚石型结构的几何结构因子，设原子散射因子为 $f$。
+
+\noindent \textbf{解：}
+
+几何结构因子
+
+\begin{equation*}
+    F(\vec{k}) = \sum_j f_j e^{i\vec{k}\cdot\vec{r}_j}
+\end{equation*}
+
+其中 $\vec{r}_j=u_j\vec{a}+v_j\vec{b}+w_j\vec{c}$
+
+\begin{equation*}
+    \vec{K} = \vec{k} - \vec{k}_0 = \vec{K}_{h^\prime k^\prime l^\prime} = m \vec{K}_{hkl} = m (h\vec{a^*}+k\vec{b^*}+l\vec{c^*})
+\end{equation*}
+
+\begin{equation*}
+    \vec{a^*} = 2\pi(\vec{b}\times\vec{c}), \quad \vec{b^*} = 2\pi(\vec{c}\times\vec{a}), \quad \vec{c^*} = 2\pi(\vec{a}\times\vec{b})
+\end{equation*}
+
+其中 $\Gamma$ 为晶胞的体积。$\vec{r}_j=u_j\vec{a}+v_j\vec{b}+w_j\vec{c}$。
+
+金刚石型结构的晶胞内八个原子的位矢为
+
+\begin{equation*}
+    \begin{matrix}
+    (0\ 0\ 0) & (\frac{1}{2}\ \frac{1}{2}\ \frac{1}{2}) & (\frac{1}{2}\ 0\ \frac{1}{2}) & (0\ \frac{1}{2}\ \frac{1}{2}) \\
+    (\frac{1}{4}\ \frac{1}{4}\ \frac{1}{4}) & (\frac{3}{4}\ \frac{3}{4}\ \frac{1}{4}) & (\frac{3}{4}\ \frac{1}{4}\ \frac{3}{4}) & (\frac{1}{4}\ \frac{3}{4}\ \frac{3}{4})
+    \end{matrix}
+\end{equation*}
+
+以上八个原子为同种原子，所以金刚石型结构的几何结构因子为：
+
+\begin{align*}
+    F(\vec{K}) &= f + f e^{i\pi m(h+k)} + f e^{i\pi m(h+l)} + f e^{i\pi m(l+k)} \\
+    &+ f e^{i\pi m\left(\frac{h}{2}+\frac{k}{2}+\frac{l}{2}\right)} + f e^{i\pi m\left(\frac{3h}{2}+\frac{3k}{2}+\frac{l}{2}\right)} + f e^{i\pi m\left(\frac{3h}{2}+\frac{k}{2}+\frac{3l}{2}\right)} + f e^{i\pi m\left(\frac{h}{2}+\frac{3k}{2}+\frac{3l}{2}\right)}
+\end{align*}
+
+\noindent \textbf{7.\quad} 设一二维格子的基矢 $a_1=\qty{0.125}{nm}, a_2=\qty{0.250}{nm}$，$a_1$ 与 $a_2$ 夹角 $a=\ang{120}$，试画出第一与第二布里渊区。
+
+\noindent \textbf{解：}
+
+\begin{equation*}
+    a_1=\qty{0.125}{nm}, \quad a_2=\qty{0.250}{nm}
+\end{equation*}
+
+令 $|\vec{a}_1|=a$，则 $\vec{a}_1=a\vec{i}, \vec{a}_2=-a\vec{i}+\sqrt{3}a\vec{j}$
+
+\begin{align*}
+    \vec{b}_i \cdot \vec{a}_j &= 2\pi \delta_{ij} \\
+    \vec{b}_1 &= \frac{2\pi}{a} \vec{i} + \frac{2\pi}{\sqrt{3}a} \vec{j}, \quad \vec{b}_2 = \frac{2\pi}{\sqrt{3}a} \vec{j}
+\end{align*}
+
+令 $b=\frac{2\pi}{\sqrt{3}a}$，则
+
+\begin{align*}
+    \vec{b}_1 &= b(\sqrt{3}\vec{i}+\vec{j}) \\
+    \vec{b}_2 &= b \vec{j}
+\end{align*}
+
+中间矩形为第一布里渊区，阴影部分为第二布里渊区。
+
+\noindent \textbf{8.\quad} 铜靶发射 $\lambda=\qty{0.154}{nm}$ 的 $X$ 射线入射铝单晶，如铝 $(1\ 1\ 1)$ 面一级布拉格反射角 $\theta=\ang{19.2}$，试据此计算铝 $(1\ 1\ 1)$ 面族的间距 $d$ 与铝的晶格常数。
+
+\noindent \textbf{解：}
+
+\begin{equation*}
+    \vec{a^*} = \frac{2\pi}{a} \vec{i}, \quad \vec{b^*} = \frac{2\pi}{b} \vec{j}, \quad \vec{c^*} = \frac{2\pi}{c} \vec{k}
+\end{equation*}
+
+且
+
+\begin{equation*}
+    h = k = l = 1, \quad m = 1
+\end{equation*}
+
+可得
+
+\begin{equation*}
+    \vec{k_h} = \frac{2\pi}{a} \vec{i} + \frac{2\pi}{b} \vec{j} + \frac{2\pi}{c} \vec{k}, \quad |\vec{k_h}| = \frac{2\pi}{a} \sqrt{3}
+\end{equation*}
+
+由于
+
+\begin{equation*}
+    2 d_{hkl} \sin\theta = \lambda
+\end{equation*}
+
+所以铝 $(1\ 1\ 1)$ 面族的间距 $d$ 为
+
+\begin{equation*}
+    d_{hkl} =  \frac{\lambda}{2\sin \ang{19.2}} \approx \qty{0.234}{nm}
+\end{equation*}
+
+因为 $|\vec{k_h}|=\frac{2\pi}{d_{hkl}}$，所以
+
+\begin{equation*}
+    \frac{2\pi}{a} \sqrt{3} = \frac{2\pi}{d_{hkl}}
+\end{equation*}
+
+\begin{equation*}
+    a = \sqrt{3} d_{hkl} = \qty{0.405}{nm}
+\end{equation*}

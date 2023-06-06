@@ -1,0 +1,275 @@
+\chapter{金属电子论\label{ch:6}}
+
+\noindent \textbf{1.\quad}导出一维和二维自由电子气的能态密度。
+
+\noindent \textbf{解：}
+
+一维情形：
+
+自由电子的 Schrödinger 方程为
+
+\begin{equation*}
+    -\frac{\hbar^2}{2m} \cdot \frac{\dif^2 \varphi}{\dif x^2} = E \varphi
+\end{equation*}
+
+自由电子波函数的解为
+
+\begin{equation*}
+    \dif Z = 2 \cdot \frac{L}{2\pi} \cdot 2 \dif k = \frac{2L}{\pi} \dif k = \frac{2L}{\pi} \frac{\sqrt{2m}}{\hbar} \frac{\dif E}{2 \sqrt{E}} = \frac{L}{\pi} \frac{\sqrt{2m}}{\hbar} \frac{\dif E}{\sqrt{E}}
+\end{equation*}
+
+且有
+
+\begin{equation*}
+    E = \frac{\hbar^2 k^2}{2m}
+\end{equation*}
+
+由周期性边界条件 $\varphi(x+L)=\varphi(x)$ ，可得
+
+\begin{equation*}
+    k = \frac{2\pi}{L} n
+\end{equation*}
+
+在 $k=\sqrt{2mE}/\hbar$ 处于区间 $[k, k+\dif k]$ 时候
+
+由于 $\dif Z = L g_1(E) \dif E$，对比可得
+
+\begin{equation*}
+    g_1(E) = \frac{\sqrt{2m}}{\pi\hbar} E^{-\frac{1}{2}}
+\end{equation*}
+
+二维情形：
+
+同上，由电子的 Schrödinger 方程：
+
+\begin{equation*}
+    -\frac{\hbar^2}{2m} \nabla^2 \varphi = E \varphi
+\end{equation*}
+
+得自由电子波函数解：
+
+\begin{equation*}
+    \varphi(\mathbf{r}) = \frac{1}{\sqrt{S}} e^{i \mathbf{k} \cdot \mathbf{r}}, \quad S = L^2
+\end{equation*}
+
+且
+
+\begin{equation*}
+    E(\mathbf{k}) = \frac{\hbar^2 k^2}{2m} = \frac{hbar^2}{2m} (k_x^2 + k_y^2)
+\end{equation*}
+
+由周期性边界条件可得
+
+\begin{equation*}
+    \begin{cases}
+        \varphi(x+L, y) = \varphi(x, y) \\
+        \varphi(x, y+L) = \varphi(x, y)
+    \end{cases}
+\end{equation*}
+
+可得
+
+\begin{equation*}
+    k_x = \frac{2\pi}{L} n_x, \quad k_y = \frac{2\pi}{L} n_y
+\end{equation*}
+
+在区间 $[k=\sqrt{2mE}/\hbar, k+\dif k]$ 内
+
+\begin{equation*}
+    \dif Z = 2 \cdot \frac{S}{(2\pi)^2} \dif \mathbf{k} = \frac{S}{2\pi^2} \cdot 2\pi k \dif k = \frac{mS}{\pi \hbar^2} \dif E
+\end{equation*}
+
+同理，与 $\dif Z=S g_2(E) \dif E$ 比较可得
+
+\begin{equation*}
+    g_2(E) = \frac{m}{\pi \hbar}
+\end{equation*}
+
+\noindent \textbf{2.\quad} 若二维电子气的面密度为 $n_s$，证明它的化学势为：
+
+\begin{equation*}
+    \mu = k_B T \ln \left[\exp\left(\frac{\pi\hbar^2 n_s}{m k_B T}\right)-1\right]
+\end{equation*}
+
+\noindent \textbf{解：}
+
+由前一题已经求得能态密度
+
+\begin{equation*}
+    g(E) = \frac{m}{\pi\hbar}
+\end{equation*}
+
+电子气体的化学势 $\mu$ 由下式决定：
+
+\begin{equation*}
+    N = \int_0^\infty g(E) L^2 \dif E = \frac{L^2}{\pi \hbar^2} \int_0^\infty \frac{\dif E}{e^{(E-\mu)/k_B T}+1}
+\end{equation*}
+
+我们令 $x\equiv(E-\mu)/k_B T$，注意到 $n_s=\frac{N}{L^2}$
+
+\begin{align*}
+    n_s &= \frac{k_B T m}{\pi\hbar^2} \int_{-\mu/k_B T}^{\infty} \frac{1}{e^x+1} \dif x \\
+    &= \frac{k_B T m}{\pi\hbar^2} \int_{-\mu/k_B T}^{\infty} \frac{\dif e^x}{e^x(e^x+1)} \\
+    &= \frac{k_B T m}{\pi\hbar^2} \left. \ln\frac{e^x}{e^x+1} \right|_{-\mu/k_B T}^{\infty} \\
+    &= \frac{k_B T m}{\pi\hbar^2} \ln \left(e^{\mu/k_B T}+1\right)
+\end{align*}
+
+那么可以求出 $\mu$
+
+\begin{equation*}
+    \mu = k_B T \ln \left[\exp\left(\frac{\pi\hbar^2 n_s}{m k_B T}\right)-1\right]
+\end{equation*}
+
+\noindent \textbf{3.\quad} \ce{^3 He} 是费米子，液体 \ce{^3 He} 在绝对零度附近的密度为 \qty{0.081}{g.cm^{-3}}。计算它的费米能压和费米温度 $T_F$。
+
+\noindent \textbf{解：}
+
+\ce{^3 He} 的数密度：
+
+\begin{equation*}
+    n = \frac{N}{V} = \frac{N}{M} \cdot \frac{M}{V} = \rho \cdot \frac{N}{M} = \frac{\rho}{m}
+\end{equation*}
+
+其中 $m$ 为单个 \ce{^3 He} 粒子的质量
+
+\begin{equation*}
+    k_F = (3\pi^2 n)^{\frac{1}{3}} = \left(\frac{6\pi^2 \rho}{m}\right)^{\frac{1}{3}}
+\end{equation*}
+
+可得
+
+\begin{equation*}
+    E_F = \frac{\hbar^2 k^2}{2m} = \frac{\hbar^2}{2m} \left(\frac{6\pi^2 \rho}{m}\right)^{\frac{2}{3}}
+\end{equation*}
+
+代入数据，可以算得：
+
+\begin{equation*}
+    E_F = \qty{6.8577e-23}{J} = \qty{4.28e-4}{eV}
+\end{equation*}
+
+则：
+
+\begin{equation*}
+    T_F = \frac{E_F}{k_B} = \qty{4.79}{K}
+\end{equation*}
+
+\noindent \textbf{4.\quad} 金属钾在低温下的摩尔电子比热的实验值为：$c_e= 2.08 T \unit{mJ/(mol.K)}$, 试用自由电子气模型求它的费米能扁及状态密度 $g(E_F)$
+
+\noindent \textbf{解：}
+
+考虑费米球模型，在费米面以内的粒子吸收能量跃出费米面的数目期望是：
+
+\begin{equation*}
+    \overline{N} = c \int_{E_F-\frac{3}{2}kT}^{\infty} E^{1/2} \dif E = \frac{9}{4} N \frac{kT}{E_F}
+\end{equation*}
+
+这些粒子共吸收能量：
+
+\begin{equation*}
+    \overline{E} = \frac{\overline{N} \cdot \frac{3}{2}kT}{N} = \frac{27}{4} \cdot \frac{k_B^2 T^2}{E_F}
+\end{equation*}
+
+则相应的热容量为：
+
+\begin{equation*}
+    C_{ve} = \frac{\partial \overline{E}}{\partial E} = \frac{27}{4} \cdot \frac{k_B^2 T}{E_F} = \lambda T
+\end{equation*}
+
+其中：$\lambda=\frac{27}{4} \cdot \frac{k_B^2}{E_F}$
+
+由题设数据，代入上式，可求出 $E_F$ 及 $g(E_F)$：
+
+\begin{align*}
+    E_F &= \frac{27 k_B^2 N_A}{4} = \qty{2.235e-3}{eV} \\
+    g(E_F) &= \frac{3n V_N}{2 E_F} = \frac{3 N_A}{2 E_F} = \num{2.425e45}
+\end{align*}
+
+\noindent \textbf{5.\quad} 银是一价金属，在 $T=\qty{295}{K}$ 时，银的电阻率 $P=\qty{1.61e-6}{\Omega.cm}$，在 $T=\qty{20}{K}$ 时，电阻率 $\rho=\qty{0.038e-9}{\Omega.cm}$。求在低温和室温时电子的自由程。银的原子量为 $107.87$，密度为 \qty{10.5}{g/cm^3}。
+
+\noindent \textbf{解：}
+
+由
+
+\begin{equation*}
+    \rho = \frac{1}{\sigma} = \frac{m V_F}{n e^2 l}
+\end{equation*}
+
+可得
+
+\begin{equation*}
+    l = \frac{m V_F}{n e^2 \rho}
+\end{equation*}
+
+又因为
+
+\begin{equation*}
+    n = \frac{N}{V} = \frac{N}{M} \frac{M}{V} = \rho_0 \cdot \frac{N}{N_A} \cdot \frac{N_A}{M} = \frac{\rho_0 \cdot N_A}{M_s}
+\end{equation*}
+
+其中 $N_A$ 为阿伏加德罗常数，$M_s$ 为 \ce{Ag} 的原子溢，$\rho_0$ 为 \ce{Ag} 的密度。将上式代入 $l$ 的表达式，并代入数据可得：
+
+当 $T=\qty{295}{K}$ 时，$l=\qty{3.7e-4}{m}$，
+
+当 $T=\qty{20}{K}$ 时，$l=\qty{1.6}{m}$，
+
+在计算过程中，已取 $V_F=\qty{e6}{m}$。
+
+\noindent \textbf{6.\quad} Hunter S.C 和 F.R.N.Nabarro 曾计算铜中每厘米位错线引起的电阻率如下：
+
+\begin{enumerate}
+    \item 刃型位错 $\Delta_{\rho E} = \qty{0.59e-20}{\Omega.cm}$
+    \item 螺型位错 $\Delta_{\rho s} = \qty{0.18e-20}{\Omega.cm}$
+\end{enumerate}
+
+假定刃型位错和螺型位错有相同的密度 (位错密度为 \qty{1}{cm^2} 有多少条位错线)。已知位错产生的电阻率 $\Delta \rho = \qty{2e-8}{\Omega.cm}$，问铜中的位错密度是多少？
+
+\noindent \textbf{解：}
+
+设密度为 $X$，由题意可以列出方程：
+
+\begin{equation*}
+    \left(\Delta_{\rho E} + \Delta_{\rho E}\right) \cdot x = \Delta \rho
+\end{equation*}
+
+\noindent \textbf{7.\quad} 在室温下金属铍的霍尔系数为 \qty{2.44e-10}{m^3.C^{-1}}，求铍中空穴密度。
+
+\noindent \textbf{解：}
+
+由霍尔系数定义 $R_H=\frac{1}{pe}$ 得
+
+\begin{equation*}
+    p = \frac{1}{e \cdot R_H} = \qty{2.56e28}{m^{-3}}
+\end{equation*}
+
+\noindent \textbf{8.\quad} 试计算 \ce{Cs} 在 $T=\qty{1000}{K}$ 时热电子发射的电流密度。
+
+\noindent \textbf{解：}
+
+电子热发射的电流密度函数为：
+
+\begin{equation*}
+    j = 4\pi e \left[\frac{m(kT)^2}{\hbar^3}\right] e^{-\frac{\phi}{kT}}
+\end{equation*}
+
+查表可得 \ce{Cs} 的功函数为 \qty{1.81}{eV}。代入数据到上式中可以算得：
+
+\begin{equation*}
+    j = \qty{9.2e2}{A.m^{-2}}
+\end{equation*}
+
+\noindent \textbf{9.\quad} \ce{Al} 等离子体能量 $\hbar \omega_p$ 的实验值为 \qty{15.3}{eV}，按照自由电子气模型的电子密度为 $n=\qty{18.06e22}{m^{-3}}$, 求 $\hbar \omega_p$ 的理论值。
+
+\noindent \textbf{解：}
+
+由等离子体振荡频率关系式：
+
+\begin{equation*}
+    \omega_p^2 = \frac{n e^2}{\varepsilon_0 m}
+\end{equation*}
+
+故：
+
+\begin{equation*}
+    \hbar \omega_p = \hbar e \sqrt{\frac{n}{\varepsilon_0 m}} = \qty{15.7}{eV}
+\end{equation*}
