@@ -1,23 +1,37 @@
 \documentclass[oneside,a4paper,openany,11pt]{ctexbook}
-\usepackage{amsmath,amssymb,amsfonts,amsthm}
-\usepackage{graphicx}
 
 \usepackage{geometry}
-\geometry{a4paper, left=2.0cm, right=2.0cm, top=2.5cm, bottom=2.2cm}
+\geometry{          %% 调整页边距
+    verbose,        % 提示信息
+    a4paper,        % 纸张大小
+    left=2.0cm,     % 左边距
+    right=2.0cm,    % 右边距
+    top=2.5cm,      % 上边距
+    bottom=2.2cm    % 下边距
+}
+
+
+\usepackage{amsmath,amssymb,amsfonts,amsthm}
+\newcommand*{\dif}{\mathop{}\!\mathrm{d}} % 定义微分算子
+
+
+\usepackage{graphicx}
+
 
 \ctexset{%
     section/format += \raggedright
 }
 
+
 \usepackage[version=4]{mhchem}
 \usepackage{siunitx}
 % \usepackage{tikz}
 
-\newcommand*{\dif}{\mathop{}\!\mathrm{d}} % 定义微分算子
 
 \usepackage{makeidx} % 调用 makeidx 宏包，用来处理索引
 \makeindex % 开启索引的收集
 \bibliographystyle{plain} % 指定参考文献样式为 plain
+
 
 \usepackage[breaklinks,colorlinks,linkcolor=black,citecolor=black,urlcolor=black]{hyperref}
 %%%%% url自动断词换行 %%%%%
@@ -35,6 +49,7 @@
 \g@addto@macro{\UrlBreaks}{\UrlDigits}
 \makeatother
 %%%%% url自动断词换行 %%%%%
+
 
 \title{《固体物理学》习题解答}
 \author{祝茗}
